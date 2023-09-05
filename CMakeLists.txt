@@ -19,5 +19,9 @@ function(add_chapter TARGET_NAME SOURCE_FILE)
     )
 endfunction()
 
+# Virtual Painter
 add_chapter(virtual-painter VirtualPainter/VirtualPainter.cpp)
 add_chapter(color-picker VirtualPainter/ColorPicker.cpp)
+
+# License Plate Detector
+add_chapter(license-plate-detector LicensePlateDetector/LicensePlateDetector.cpp)

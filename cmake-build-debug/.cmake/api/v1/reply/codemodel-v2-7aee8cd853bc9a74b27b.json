@@ -16,7 +16,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -32,7 +33,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -41,14 +43,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "color-picker::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-color-picker-Debug-9fd2913bf0bc1807ae6f.json",
+					"jsonFile" : "target-color-picker-Debug-43e0bf5609a6748869e0.json",
 					"name" : "color-picker",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "license-plate-detector::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-license-plate-detector-Debug-9c317db7c663ba8558ea.json",
+					"name" : "license-plate-detector",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "virtual-painter::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-virtual-painter-Debug-314ffd52c4e7c8ce9725.json",
+					"jsonFile" : "target-virtual-painter-Debug-09db5b49748a8fe8832f.json",
 					"name" : "virtual-painter",
 					"projectIndex" : 0
 				}

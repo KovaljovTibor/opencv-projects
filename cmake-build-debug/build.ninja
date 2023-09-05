@@ -106,6 +106,39 @@ build color-picker: CXX_EXECUTABLE_LINKER__color-picker_Debug CMakeFiles/color-p
   TARGET_FILE = color-picker
   TARGET_PDB = color-picker.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target license-plate-detector
+
+
+#############################################
+# Order-only phony target for license-plate-detector
+
+build cmake_object_order_depends_target_license-plate-detector: phony || CMakeFiles/license-plate-detector.dir
+
+build CMakeFiles/license-plate-detector.dir/LicensePlateDetector/LicensePlateDetector.cpp.o: CXX_COMPILER__license-plate-detector_unscanned_Debug /home/tibor/Desktop/opencv-projects/LicensePlateDetector/LicensePlateDetector.cpp || cmake_object_order_depends_target_license-plate-detector
+  DEP_FILE = CMakeFiles/license-plate-detector.dir/LicensePlateDetector/LicensePlateDetector.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/license-plate-detector.dir
+  OBJECT_FILE_DIR = CMakeFiles/license-plate-detector.dir/LicensePlateDetector
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target license-plate-detector
+
+
+#############################################
+# Link the executable license-plate-detector
+
+build license-plate-detector: CXX_EXECUTABLE_LINKER__license-plate-detector_Debug CMakeFiles/license-plate-detector.dir/LicensePlateDetector/LicensePlateDetector.cpp.o
+  FLAGS = -g
+  LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
+  OBJECT_DIR = CMakeFiles/license-plate-detector.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = license-plate-detector
+  TARGET_PDB = license-plate-detector.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -140,7 +173,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/tibor/Desktop/opencv-projects/cmake-build-debug
 
-build all: phony virtual-painter color-picker
+build all: phony virtual-painter color-picker license-plate-detector
 
 # =============================================================================
 # Built-in targets
