@@ -1,0 +1,19 @@
+# ninja log v5
+1224	1473	1693918723506111758	virtual-painter	5bc84232a7195bae
+1	1224	1693918723262101860	CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o	823b343446f8bcf4
+0	1221	1693919297545522415	CMakeFiles/color-picker.dir/VirtualPainter/ColorPicker.cpp.o	356153dde9f3aaaa
+1221	1457	1693919297781533729	color-picker	2ffc35001c63dc35
+1	1268	1693919343135627045	CMakeFiles/color-picker.dir/VirtualPainter/ColorPicker.cpp.o	356153dde9f3aaaa
+1268	1531	1693919343395638607	color-picker	2ffc35001c63dc35
+1	1271	1693920225296798032	CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o	823b343446f8bcf4
+1271	1508	1693920225532811245	virtual-painter	5bc84232a7195bae
+1	1351	1693920725140146310	CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o	823b343446f8bcf4
+1351	1594	1693920725380155906	virtual-painter	5bc84232a7195bae
+1	1327	1693920839756614543	CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o	823b343446f8bcf4
+1327	1570	1693920839996623676	virtual-painter	5bc84232a7195bae
+1	1556	1693921682749371338	CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o	823b343446f8bcf4
+1556	1813	1693921683005379484	virtual-painter	5bc84232a7195bae
+0	1497	1693921799221058570	CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o	823b343446f8bcf4
+1497	1750	1693921799473066511	virtual-painter	5bc84232a7195bae
+1	1524	1693921874815434414	CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o	823b343446f8bcf4
+1524	1788	1693921875075442566	virtual-painter	5bc84232a7195bae
