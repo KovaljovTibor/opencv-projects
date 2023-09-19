@@ -20,8 +20,19 @@ function(add_chapter TARGET_NAME SOURCE_FILE)
 endfunction()
 
 # Virtual Painter
-add_chapter(virtual-painter VirtualPainter/VirtualPainter.cpp)
-add_chapter(color-picker VirtualPainter/ColorPicker.cpp)
+add_chapter(virtual-painter VirtualPainter/main.cpp)
 
 # License Plate Detector
-add_chapter(license-plate-detector LicensePlateDetector/LicensePlateDetector.cpp)
+add_chapter(license-plate-detector LicensePlateDetector/main.cpp)
+
+# Face Tracking
+add_chapter(face-tracking FaceTracking/main.cpp)
+
+# Soccer Field Segmentation
+add_chapter(color-segmentation ColorSegmentation/main.cpp)
+
+# Document Scanner
+add_chapter(document-scanner DocumentScanner/main.cpp)
+
+# Basic Object Detection
+add_chapter(shape-detection BasicShapeDetection/main.cpp)

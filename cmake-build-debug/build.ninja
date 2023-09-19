@@ -49,8 +49,8 @@ cmake_ninja_workdir = /home/tibor/Desktop/opencv-projects/cmake-build-debug/
 
 build cmake_object_order_depends_target_virtual-painter: phony || CMakeFiles/virtual-painter.dir
 
-build CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o: CXX_COMPILER__virtual-painter_unscanned_Debug /home/tibor/Desktop/opencv-projects/VirtualPainter/VirtualPainter.cpp || cmake_object_order_depends_target_virtual-painter
-  DEP_FILE = CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o.d
+build CMakeFiles/virtual-painter.dir/VirtualPainter/main.cpp.o: CXX_COMPILER__virtual-painter_unscanned_Debug /home/tibor/Desktop/opencv-projects/VirtualPainter/main.cpp || cmake_object_order_depends_target_virtual-painter
+  DEP_FILE = CMakeFiles/virtual-painter.dir/VirtualPainter/main.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
   OBJECT_DIR = CMakeFiles/virtual-painter.dir
@@ -64,7 +64,7 @@ build CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o: CXX_CO
 #############################################
 # Link the executable virtual-painter
 
-build virtual-painter: CXX_EXECUTABLE_LINKER__virtual-painter_Debug CMakeFiles/virtual-painter.dir/VirtualPainter/VirtualPainter.cpp.o
+build virtual-painter: CXX_EXECUTABLE_LINKER__virtual-painter_Debug CMakeFiles/virtual-painter.dir/VirtualPainter/main.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
   OBJECT_DIR = CMakeFiles/virtual-painter.dir
@@ -72,39 +72,6 @@ build virtual-painter: CXX_EXECUTABLE_LINKER__virtual-painter_Debug CMakeFiles/v
   PRE_LINK = :
   TARGET_FILE = virtual-painter
   TARGET_PDB = virtual-painter.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target color-picker
-
-
-#############################################
-# Order-only phony target for color-picker
-
-build cmake_object_order_depends_target_color-picker: phony || CMakeFiles/color-picker.dir
-
-build CMakeFiles/color-picker.dir/VirtualPainter/ColorPicker.cpp.o: CXX_COMPILER__color-picker_unscanned_Debug /home/tibor/Desktop/opencv-projects/VirtualPainter/ColorPicker.cpp || cmake_object_order_depends_target_color-picker
-  DEP_FILE = CMakeFiles/color-picker.dir/VirtualPainter/ColorPicker.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
-  OBJECT_DIR = CMakeFiles/color-picker.dir
-  OBJECT_FILE_DIR = CMakeFiles/color-picker.dir/VirtualPainter
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target color-picker
-
-
-#############################################
-# Link the executable color-picker
-
-build color-picker: CXX_EXECUTABLE_LINKER__color-picker_Debug CMakeFiles/color-picker.dir/VirtualPainter/ColorPicker.cpp.o
-  FLAGS = -g
-  LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
-  OBJECT_DIR = CMakeFiles/color-picker.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = color-picker
-  TARGET_PDB = color-picker.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target license-plate-detector
@@ -115,8 +82,8 @@ build color-picker: CXX_EXECUTABLE_LINKER__color-picker_Debug CMakeFiles/color-p
 
 build cmake_object_order_depends_target_license-plate-detector: phony || CMakeFiles/license-plate-detector.dir
 
-build CMakeFiles/license-plate-detector.dir/LicensePlateDetector/LicensePlateDetector.cpp.o: CXX_COMPILER__license-plate-detector_unscanned_Debug /home/tibor/Desktop/opencv-projects/LicensePlateDetector/LicensePlateDetector.cpp || cmake_object_order_depends_target_license-plate-detector
-  DEP_FILE = CMakeFiles/license-plate-detector.dir/LicensePlateDetector/LicensePlateDetector.cpp.o.d
+build CMakeFiles/license-plate-detector.dir/LicensePlateDetector/main.cpp.o: CXX_COMPILER__license-plate-detector_unscanned_Debug /home/tibor/Desktop/opencv-projects/LicensePlateDetector/main.cpp || cmake_object_order_depends_target_license-plate-detector
+  DEP_FILE = CMakeFiles/license-plate-detector.dir/LicensePlateDetector/main.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
   OBJECT_DIR = CMakeFiles/license-plate-detector.dir
@@ -130,7 +97,7 @@ build CMakeFiles/license-plate-detector.dir/LicensePlateDetector/LicensePlateDet
 #############################################
 # Link the executable license-plate-detector
 
-build license-plate-detector: CXX_EXECUTABLE_LINKER__license-plate-detector_Debug CMakeFiles/license-plate-detector.dir/LicensePlateDetector/LicensePlateDetector.cpp.o
+build license-plate-detector: CXX_EXECUTABLE_LINKER__license-plate-detector_Debug CMakeFiles/license-plate-detector.dir/LicensePlateDetector/main.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
   OBJECT_DIR = CMakeFiles/license-plate-detector.dir
@@ -138,6 +105,138 @@ build license-plate-detector: CXX_EXECUTABLE_LINKER__license-plate-detector_Debu
   PRE_LINK = :
   TARGET_FILE = license-plate-detector
   TARGET_PDB = license-plate-detector.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target face-tracking
+
+
+#############################################
+# Order-only phony target for face-tracking
+
+build cmake_object_order_depends_target_face-tracking: phony || CMakeFiles/face-tracking.dir
+
+build CMakeFiles/face-tracking.dir/FaceTracking/main.cpp.o: CXX_COMPILER__face-tracking_unscanned_Debug /home/tibor/Desktop/opencv-projects/FaceTracking/main.cpp || cmake_object_order_depends_target_face-tracking
+  DEP_FILE = CMakeFiles/face-tracking.dir/FaceTracking/main.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/face-tracking.dir
+  OBJECT_FILE_DIR = CMakeFiles/face-tracking.dir/FaceTracking
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target face-tracking
+
+
+#############################################
+# Link the executable face-tracking
+
+build face-tracking: CXX_EXECUTABLE_LINKER__face-tracking_Debug CMakeFiles/face-tracking.dir/FaceTracking/main.cpp.o
+  FLAGS = -g
+  LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
+  OBJECT_DIR = CMakeFiles/face-tracking.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = face-tracking
+  TARGET_PDB = face-tracking.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target color-segmentation
+
+
+#############################################
+# Order-only phony target for color-segmentation
+
+build cmake_object_order_depends_target_color-segmentation: phony || CMakeFiles/color-segmentation.dir
+
+build CMakeFiles/color-segmentation.dir/ColorSegmentation/main.cpp.o: CXX_COMPILER__color-segmentation_unscanned_Debug /home/tibor/Desktop/opencv-projects/ColorSegmentation/main.cpp || cmake_object_order_depends_target_color-segmentation
+  DEP_FILE = CMakeFiles/color-segmentation.dir/ColorSegmentation/main.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/color-segmentation.dir
+  OBJECT_FILE_DIR = CMakeFiles/color-segmentation.dir/ColorSegmentation
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target color-segmentation
+
+
+#############################################
+# Link the executable color-segmentation
+
+build color-segmentation: CXX_EXECUTABLE_LINKER__color-segmentation_Debug CMakeFiles/color-segmentation.dir/ColorSegmentation/main.cpp.o
+  FLAGS = -g
+  LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
+  OBJECT_DIR = CMakeFiles/color-segmentation.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = color-segmentation
+  TARGET_PDB = color-segmentation.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target document-scanner
+
+
+#############################################
+# Order-only phony target for document-scanner
+
+build cmake_object_order_depends_target_document-scanner: phony || CMakeFiles/document-scanner.dir
+
+build CMakeFiles/document-scanner.dir/DocumentScanner/main.cpp.o: CXX_COMPILER__document-scanner_unscanned_Debug /home/tibor/Desktop/opencv-projects/DocumentScanner/main.cpp || cmake_object_order_depends_target_document-scanner
+  DEP_FILE = CMakeFiles/document-scanner.dir/DocumentScanner/main.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/document-scanner.dir
+  OBJECT_FILE_DIR = CMakeFiles/document-scanner.dir/DocumentScanner
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target document-scanner
+
+
+#############################################
+# Link the executable document-scanner
+
+build document-scanner: CXX_EXECUTABLE_LINKER__document-scanner_Debug CMakeFiles/document-scanner.dir/DocumentScanner/main.cpp.o
+  FLAGS = -g
+  LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
+  OBJECT_DIR = CMakeFiles/document-scanner.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = document-scanner
+  TARGET_PDB = document-scanner.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target shape-detection
+
+
+#############################################
+# Order-only phony target for shape-detection
+
+build cmake_object_order_depends_target_shape-detection: phony || CMakeFiles/shape-detection.dir
+
+build CMakeFiles/shape-detection.dir/BasicShapeDetection/main.cpp.o: CXX_COMPILER__shape-detection_unscanned_Debug /home/tibor/Desktop/opencv-projects/BasicShapeDetection/main.cpp || cmake_object_order_depends_target_shape-detection
+  DEP_FILE = CMakeFiles/shape-detection.dir/BasicShapeDetection/main.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/shape-detection.dir
+  OBJECT_FILE_DIR = CMakeFiles/shape-detection.dir/BasicShapeDetection
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target shape-detection
+
+
+#############################################
+# Link the executable shape-detection
+
+build shape-detection: CXX_EXECUTABLE_LINKER__shape-detection_Debug CMakeFiles/shape-detection.dir/BasicShapeDetection/main.cpp.o
+  FLAGS = -g
+  LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
+  OBJECT_DIR = CMakeFiles/shape-detection.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = shape-detection
+  TARGET_PDB = shape-detection.dbg
 
 
 #############################################
@@ -173,7 +272,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/tibor/Desktop/opencv-projects/cmake-build-debug
 
-build all: phony virtual-painter color-picker license-plate-detector
+build all: phony virtual-painter license-plate-detector face-tracking color-segmentation document-scanner shape-detection
 
 # =============================================================================
 # Built-in targets

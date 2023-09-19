@@ -1,5 +1,8 @@
 /home/tibor/Desktop/opencv-projects/cmake-build-debug/CMakeFiles/virtual-painter.dir
-/home/tibor/Desktop/opencv-projects/cmake-build-debug/CMakeFiles/color-picker.dir
 /home/tibor/Desktop/opencv-projects/cmake-build-debug/CMakeFiles/license-plate-detector.dir
+/home/tibor/Desktop/opencv-projects/cmake-build-debug/CMakeFiles/face-tracking.dir
+/home/tibor/Desktop/opencv-projects/cmake-build-debug/CMakeFiles/color-segmentation.dir
+/home/tibor/Desktop/opencv-projects/cmake-build-debug/CMakeFiles/document-scanner.dir
+/home/tibor/Desktop/opencv-projects/cmake-build-debug/CMakeFiles/shape-detection.dir
 /home/tibor/Desktop/opencv-projects/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/tibor/Desktop/opencv-projects/cmake-build-debug/CMakeFiles/rebuild_cache.dir

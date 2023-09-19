@@ -17,7 +17,10 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3,
+						4,
+						5
 					]
 				}
 			],
@@ -34,7 +37,10 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3,
+						4,
+						5
 					]
 				}
 			],
@@ -42,22 +48,43 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "color-picker::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-color-picker-Debug-43e0bf5609a6748869e0.json",
-					"name" : "color-picker",
+					"id" : "color-segmentation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-color-segmentation-Debug-1879669de2b8586e0928.json",
+					"name" : "color-segmentation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "document-scanner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-document-scanner-Debug-a75e2b4d492e75d1d8d9.json",
+					"name" : "document-scanner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "face-tracking::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-face-tracking-Debug-56ce6eddbdc4f0b5425d.json",
+					"name" : "face-tracking",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "license-plate-detector::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-license-plate-detector-Debug-9c317db7c663ba8558ea.json",
+					"jsonFile" : "target-license-plate-detector-Debug-d19fa5ffea051825cf7a.json",
 					"name" : "license-plate-detector",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "shape-detection::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-shape-detection-Debug-450c9b22b2f6483e21a2.json",
+					"name" : "shape-detection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "virtual-painter::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-virtual-painter-Debug-09db5b49748a8fe8832f.json",
+					"jsonFile" : "target-virtual-painter-Debug-261883545e70802444dc.json",
 					"name" : "virtual-painter",
 					"projectIndex" : 0
 				}

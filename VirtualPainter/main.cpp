@@ -26,10 +26,10 @@ cv::Point getContours(const cv::Mat &imgDil) {
     cv::Point myPoint(0, 0);
 
     for (int i = 0; i < contours.size(); i++) {
-        int area = cv::contourArea(contours[i]);
+        auto area = cv::contourArea(contours[i]);
         std::cout << "Area: " << area << '\n';
         if (area > 1000) {
-            float peri = cv::arcLength(contours[i], true);
+            auto peri = cv::arcLength(contours[i], true);
             cv::approxPolyDP(contours[i], contourPoly[i], 0.02 * peri, true);
             std::cout << "Corner points: " << contourPoly[i].size() << '\n';
             boundRect[i] = cv::boundingRect(contourPoly[i]);
