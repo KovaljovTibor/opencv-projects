@@ -238,6 +238,72 @@ build shape-detection: CXX_EXECUTABLE_LINKER__shape-detection_Debug CMakeFiles/s
   TARGET_FILE = shape-detection
   TARGET_PDB = shape-detection.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target image-warping
+
+
+#############################################
+# Order-only phony target for image-warping
+
+build cmake_object_order_depends_target_image-warping: phony || CMakeFiles/image-warping.dir
+
+build CMakeFiles/image-warping.dir/ImageWarping/main.cpp.o: CXX_COMPILER__image-warping_unscanned_Debug /home/tibor/Desktop/opencv-projects/ImageWarping/main.cpp || cmake_object_order_depends_target_image-warping
+  DEP_FILE = CMakeFiles/image-warping.dir/ImageWarping/main.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/image-warping.dir
+  OBJECT_FILE_DIR = CMakeFiles/image-warping.dir/ImageWarping
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target image-warping
+
+
+#############################################
+# Link the executable image-warping
+
+build image-warping: CXX_EXECUTABLE_LINKER__image-warping_Debug CMakeFiles/image-warping.dir/ImageWarping/main.cpp.o
+  FLAGS = -g
+  LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
+  OBJECT_DIR = CMakeFiles/image-warping.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = image-warping
+  TARGET_PDB = image-warping.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target camera-calibration
+
+
+#############################################
+# Order-only phony target for camera-calibration
+
+build cmake_object_order_depends_target_camera-calibration: phony || CMakeFiles/camera-calibration.dir
+
+build CMakeFiles/camera-calibration.dir/CameraCalibration/main.cpp.o: CXX_COMPILER__camera-calibration_unscanned_Debug /home/tibor/Desktop/opencv-projects/CameraCalibration/main.cpp || cmake_object_order_depends_target_camera-calibration
+  DEP_FILE = CMakeFiles/camera-calibration.dir/CameraCalibration/main.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/camera-calibration.dir
+  OBJECT_FILE_DIR = CMakeFiles/camera-calibration.dir/CameraCalibration
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target camera-calibration
+
+
+#############################################
+# Link the executable camera-calibration
+
+build camera-calibration: CXX_EXECUTABLE_LINKER__camera-calibration_Debug CMakeFiles/camera-calibration.dir/CameraCalibration/main.cpp.o
+  FLAGS = -g
+  LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
+  OBJECT_DIR = CMakeFiles/camera-calibration.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = camera-calibration
+  TARGET_PDB = camera-calibration.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -272,7 +338,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/tibor/Desktop/opencv-projects/cmake-build-debug
 
-build all: phony virtual-painter license-plate-detector face-tracking color-segmentation document-scanner shape-detection
+build all: phony virtual-painter license-plate-detector face-tracking color-segmentation document-scanner shape-detection image-warping camera-calibration
 
 # =============================================================================
 # Built-in targets

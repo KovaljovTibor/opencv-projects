@@ -11,7 +11,7 @@ int main() {
     for (int x = 0; x < img.rows; x++) {
         for (int y = 0; y < img.cols; y++) {
             cv::Vec3b pixelValue = img.at<cv::Vec3b>(x, y);
-            float sumRgb = pixelValue[0] + pixelValue[1] + pixelValue[2];
+            auto sumRgb = pixelValue[0] + pixelValue[1] + pixelValue[2];
             if (sumRgb > 0.0) {
                 float g = pixelValue[1] / sumRgb;
                 green.at<cv::Vec3f>(idx, 0) = {g, g, g};
@@ -36,7 +36,7 @@ int main() {
 
     std::vector<cv::Mat> images;
     for (size_t i = 0; i < 8; i++) {
-        images.push_back(cv::Mat(img.rows, img.cols, CV_8UC3, cv::Scalar(0, 0, 0)));
+        images.emplace_back(img.rows, img.cols, CV_8UC3, cv::Scalar(0, 0, 0));
     }
 
     idx = 0;

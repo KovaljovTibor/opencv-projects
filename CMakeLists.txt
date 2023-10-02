@@ -36,3 +36,9 @@ add_chapter(document-scanner DocumentScanner/main.cpp)
 
 # Basic Object Detection
 add_chapter(shape-detection BasicShapeDetection/main.cpp)
+
+# Image Warp
+add_chapter(image-warping ImageWarping/main.cpp)
+
+# Camera Calibration
+add_chapter(camera-calibration CameraCalibration/main.cpp)
