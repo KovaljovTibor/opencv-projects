@@ -304,6 +304,39 @@ build camera-calibration: CXX_EXECUTABLE_LINKER__camera-calibration_Debug CMakeF
   TARGET_FILE = camera-calibration
   TARGET_PDB = camera-calibration.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target fourier-transform
+
+
+#############################################
+# Order-only phony target for fourier-transform
+
+build cmake_object_order_depends_target_fourier-transform: phony || CMakeFiles/fourier-transform.dir
+
+build CMakeFiles/fourier-transform.dir/DiscreteFourierTransform/main.cpp.o: CXX_COMPILER__fourier-transform_unscanned_Debug /home/tibor/Desktop/opencv-projects/DiscreteFourierTransform/main.cpp || cmake_object_order_depends_target_fourier-transform
+  DEP_FILE = CMakeFiles/fourier-transform.dir/DiscreteFourierTransform/main.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/tibor/Desktop/opencv-projects -I/usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/fourier-transform.dir
+  OBJECT_FILE_DIR = CMakeFiles/fourier-transform.dir/DiscreteFourierTransform
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target fourier-transform
+
+
+#############################################
+# Link the executable fourier-transform
+
+build fourier-transform: CXX_EXECUTABLE_LINKER__fourier-transform_Debug CMakeFiles/fourier-transform.dir/DiscreteFourierTransform/main.cpp.o
+  FLAGS = -g
+  LINK_LIBRARIES = -lopencv_stitching  -lopencv_alphamat  -lopencv_aruco  -lopencv_barcode  -lopencv_bgsegm  -lopencv_bioinspired  -lopencv_ccalib  -lopencv_dnn_objdetect  -lopencv_dnn_superres  -lopencv_dpm  -lopencv_face  -lopencv_freetype  -lopencv_fuzzy  -lopencv_hdf  -lopencv_hfs  -lopencv_img_hash  -lopencv_intensity_transform  -lopencv_line_descriptor  -lopencv_mcc  -lopencv_quality  -lopencv_rapid  -lopencv_reg  -lopencv_rgbd  -lopencv_saliency  -lopencv_shape  -lopencv_stereo  -lopencv_structured_light  -lopencv_phase_unwrapping  -lopencv_superres  -lopencv_optflow  -lopencv_surface_matching  -lopencv_tracking  -lopencv_highgui  -lopencv_datasets  -lopencv_text  -lopencv_plot  -lopencv_ml  -lopencv_videostab  -lopencv_videoio  -lopencv_viz  -lopencv_wechat_qrcode  -lopencv_ximgproc  -lopencv_video  -lopencv_xobjdetect  -lopencv_objdetect  -lopencv_calib3d  -lopencv_imgcodecs  -lopencv_features2d  -lopencv_dnn  -lopencv_flann  -lopencv_xphoto  -lopencv_photo  -lopencv_imgproc  -lopencv_core
+  OBJECT_DIR = CMakeFiles/fourier-transform.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = fourier-transform
+  TARGET_PDB = fourier-transform.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -338,7 +371,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/tibor/Desktop/opencv-projects/cmake-build-debug
 
-build all: phony virtual-painter license-plate-detector face-tracking color-segmentation document-scanner shape-detection image-warping camera-calibration
+build all: phony virtual-painter license-plate-detector face-tracking color-segmentation document-scanner shape-detection image-warping camera-calibration fourier-transform
 
 # =============================================================================
 # Built-in targets

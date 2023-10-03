@@ -38,7 +38,7 @@ void CreateKnownBoardPosition(cv::Size& boardSize, float squareEdgeLength, std::
 }
 
 
-void GetChessboardCorners(std::vector<cv::Mat>& images, std::vector<std::vector<cv::Point2f>>& allFoundPoints,
+void GetIntersections(std::vector<cv::Mat>& images, std::vector<std::vector<cv::Point2f>>& allFoundPoints,
                           bool showResults = false) {
     for (auto iter = images.begin(); iter != images.end(); iter++) {
         std::vector<cv::Point2f> pointBuffer;
