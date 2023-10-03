@@ -44,4 +44,4 @@ add_chapter(image-warping ImageWarping/main.cpp)
 add_chapter(camera-calibration CameraCalibration/main.cpp)
 
 # Fourier Transform
-add_chapter(fourier-transform DiscreteFourierTransform/main.cpp)
+add_chapter(dfourier-transform DiscreteFourierTransform/main.cpp)
