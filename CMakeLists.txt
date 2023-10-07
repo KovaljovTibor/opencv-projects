@@ -45,3 +45,4 @@ add_chapter(camera-calibration CameraCalibration/main.cpp)
 
 # Fourier Transform
 add_chapter(dfourier-transform DiscreteFourierTransform/main.cpp)
+add_chapter(dfourier-transform-implementation DiscreteFourierTransform/dftImplementation.cpp)

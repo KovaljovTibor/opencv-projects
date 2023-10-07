@@ -1,5 +1,6 @@
+#include "dftImplementation.cpp"
 #include <opencv2/opencv.hpp>
-#include <iostream>
+
 
 // 1.
 void TakeDFT(cv::Mat& source, cv::Mat& destination) {
