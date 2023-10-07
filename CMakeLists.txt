@@ -51,4 +51,5 @@ add_chapter(dfourier-transform-implementation DiscreteFourierTransform/dftImplem
 add_chapter(histograms Histograms/main.cpp)
 
 # Corner Detection
-add_chapter(corner-detection CornerDetection/main.cpp)
+add_chapter(shi-tomasi-corner-detection CornerDetection/shiTomasiCornerDetection.cpp)
+add_chapter(harris-corner-detection CornerDetection/harrisCornerDetection.cpp)

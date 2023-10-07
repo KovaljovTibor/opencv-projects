@@ -18,8 +18,8 @@ void harrisCornerDetector() {
     if (sample2.empty()) std::cout << "Could not load the image." << '\n';
 
     /* displaying starting pictures */
-    cv::imshow("Original Cube sample", sample1);
-    cv::imshow("Original House sample", sample2);
+    cv::imshow("Harris Cube sample", sample1);
+    cv::imshow("Harris House sample", sample2);
 
     /* converting images(sources) into grayscale - easier to work with */
     cv::cvtColor(sample1, sampleGray1, cv::COLOR_BGR2GRAY);
