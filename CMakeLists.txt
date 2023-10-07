@@ -46,3 +46,9 @@ add_chapter(camera-calibration CameraCalibration/main.cpp)
 # Fourier Transform
 add_chapter(dfourier-transform DiscreteFourierTransform/main.cpp)
 add_chapter(dfourier-transform-implementation DiscreteFourierTransform/dftImplementation.cpp)
+
+# Histograms
+add_chapter(histograms Histograms/main.cpp)
+
+# Corner Detection
+add_chapter(corner-detection CornerDetection/main.cpp)

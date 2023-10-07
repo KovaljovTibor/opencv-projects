@@ -3,7 +3,7 @@
 
 
 // 1.
-void TakeDFT(cv::Mat& source, cv::Mat& destination) {
+void takeDFT(cv::Mat& source, cv::Mat& destination) {
     cv::Mat originalComplex[2] = {source, cv::Mat::zeros(source.size(), CV_32F)};
     cv::Mat dftReady;
     cv::merge(originalComplex, 2, dftReady);
@@ -14,7 +14,7 @@ void TakeDFT(cv::Mat& source, cv::Mat& destination) {
 }
 
 // 3.
-void RecenterDFT(cv::Mat& source) {
+void recenterDFT(cv::Mat& source) {
     int centerX = source.cols / 2;
     int centerY = source.rows / 2;
 
@@ -35,7 +35,7 @@ void RecenterDFT(cv::Mat& source) {
 }
 
 // 2.
-void ShowDFT(cv::Mat& source) {
+void showDFT(cv::Mat& source) {
     cv::Mat splitArray[2] = {cv::Mat::zeros(source.size(), CV_32F), cv::Mat::zeros(source.size(), CV_32F)};
     cv::split(source, splitArray);
 
@@ -46,13 +46,13 @@ void ShowDFT(cv::Mat& source) {
     cv::log(dftMagnitude, dftMagnitude);
     cv::normalize(dftMagnitude, dftMagnitude, 0, 1, cv::NORM_MINMAX);
 
-    RecenterDFT(dftMagnitude);
+    recenterDFT(dftMagnitude);
     cv::imshow("DFT", dftMagnitude);
     cv::waitKey();
 }
 
 // Returning our original image from DFT
-void InvertDFT(cv::Mat& source, cv::Mat& destination) {
+void invertDFT(cv::Mat& source, cv::Mat& destination) {
     cv::Mat inverse;
     cv::dft(source, inverse, cv::DFT_INVERSE | cv::DFT_REAL_OUTPUT | cv::DFT_SCALE);
     destination = inverse;
@@ -72,11 +72,11 @@ int main() {
 
     cv::Mat dftOfOriginal;
 
-    TakeDFT(originalFloat, dftOfOriginal);
-    ShowDFT(dftOfOriginal);
+    takeDFT(originalFloat, dftOfOriginal);
+    showDFT(dftOfOriginal);
 
     cv::Mat invertedDFT;
-    InvertDFT(dftOfOriginal, invertedDFT);
+    invertDFT(dftOfOriginal, invertedDFT);
 
     cv::imshow("InvertDFT result", invertedDFT);
     cv::waitKey();

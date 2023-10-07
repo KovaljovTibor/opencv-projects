@@ -61,5 +61,6 @@ int main() {
     cv::imshow("Background", background);
 
     cv::waitKey(0);
+
     return 0;
 }
