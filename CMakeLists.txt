@@ -53,3 +53,6 @@ add_chapter(histograms Histograms/main.cpp)
 # Corner Detection
 add_chapter(shi-tomasi-corner-detection CornerDetection/shiTomasiCornerDetection.cpp)
 add_chapter(harris-corner-detection CornerDetection/harrisCornerDetection.cpp)
+
+# Color Picker
+add_chapter(color-picker ColorDetection/main.cpp)
