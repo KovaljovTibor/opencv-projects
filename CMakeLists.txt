@@ -56,3 +56,7 @@ add_chapter(harris-corner-detection CornerDetection/harrisCornerDetection.cpp)
 
 # Color Picker
 add_chapter(color-picker ColorDetection/main.cpp)
+
+# Template Matching
+add_chapter(template-matching TemplateMatching/findMatch.cpp)
+add_chapter(template-matching-all TemplateMatching/findAllMatches.cpp)
