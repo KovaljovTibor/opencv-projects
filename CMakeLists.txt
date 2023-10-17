@@ -60,3 +60,6 @@ add_chapter(color-picker ColorDetection/main.cpp)
 # Template Matching
 add_chapter(template-matching TemplateMatching/findMatch.cpp)
 add_chapter(template-matching-all TemplateMatching/findAllMatches.cpp)
+
+# Basic Morphology
+add_chapter(basic-morphology BasicMorphology/main.cpp)
