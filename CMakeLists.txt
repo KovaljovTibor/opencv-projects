@@ -63,3 +63,12 @@ add_chapter(template-matching-all TemplateMatching/findAllMatches.cpp)
 
 # Basic Morphology
 add_chapter(basic-morphology BasicMorphology/main.cpp)
+
+# Basic Stereo Vision
+add_chapter(stereo-vision BasicStereoVision/main.cpp)
+
+# Epipolar Geometry
+add_chapter(epipolar-geometry EpipolarGeometry/main.cpp)
+
+# Binary Vision
+add_chapter(binary-vision BinaryVision/main.cpp)
