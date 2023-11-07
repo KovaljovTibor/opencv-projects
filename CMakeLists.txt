@@ -40,9 +40,6 @@ add_chapter(shape-detection BasicShapeDetection/main.cpp)
 # Image Warp
 add_chapter(image-warping ImageWarping/main.cpp)
 
-# Camera Calibration
-add_chapter(camera-calibration CameraCalibration/main.cpp)
-
 # Fourier Transform
 add_chapter(dfourier-transform DiscreteFourierTransform/main.cpp)
 add_chapter(dfourier-transform-implementation DiscreteFourierTransform/dftImplementation.cpp)
@@ -72,3 +69,6 @@ add_chapter(epipolar-geometry EpipolarGeometry/main.cpp)
 
 # Binary Vision
 add_chapter(binary-vision BinaryVision/main.cpp)
+
+# 3D Coordinates Estimation
+add_chapter(estimation 3DCoordsEstimation/main.cpp)

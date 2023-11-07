@@ -3,10 +3,9 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/features2d.hpp>
 
-
 int main() {
-    cv::Mat sourceL = cv::imread("/home/tibor/Desktop/opencv-projects/EpipolarGeometry/headA.jpg");
-    cv::Mat sourceR = cv::imread("/home/tibor/Desktop/opencv-projects/EpipolarGeometry/headB.jpg");
+    cv::Mat sourceL = cv::imread("/home/tibor/Desktop/opencv-projects/EpipolarGeometry/sourceL.jpg");
+    cv::Mat sourceR = cv::imread("/home/tibor/Desktop/opencv-projects/EpipolarGeometry/sourceR.jpg");
 
     if (sourceL.empty() || sourceR.empty()) {
         std::cerr << "Error: Could not load the image." << '\n';
@@ -20,13 +19,13 @@ int main() {
 
     cv::Ptr<cv::SIFT> sift = cv::SIFT::create();
 
-    std::vector<cv::KeyPoint> keypoint1;
-    std::vector<cv::KeyPoint> keypoint2;
+    std::vector<cv::KeyPoint> keypoints1;
+    std::vector<cv::KeyPoint> keypoints2;
     cv::Mat destination1;
     cv::Mat destination2;
 
-    sift->detectAndCompute(sourceL, cv::Mat(), keypoint1, destination1);
-    sift->detectAndCompute(sourceR, cv::Mat(), keypoint2, destination2);
+    sift->detectAndCompute(sourceL, cv::Mat(), keypoints1, destination1);
+    sift->detectAndCompute(sourceR, cv::Mat(), keypoints2, destination2);
 
     std::vector<std::vector<cv::DMatch>> matches;
     cv::Ptr<cv::flann::KDTreeIndexParams> indexParams = cv::makePtr<cv::flann::KDTreeIndexParams>();
@@ -40,8 +39,8 @@ int main() {
 
     for (const auto& pair: matches) {
         if (pair[0].distance < pair[1].distance * 0.8) {
-            points2.push_back(keypoint2[pair[0].trainIdx].pt);
-            points1.push_back(keypoint1[pair[1].queryIdx].pt);
+            points1.push_back(keypoints1[pair[0].queryIdx].pt);
+            points2.push_back(keypoints2[pair[0].trainIdx].pt);
         }
     }
 
@@ -62,29 +61,20 @@ int main() {
     points2 = filteredPoints2;
 
     // Compute epilines
-    std::vector<cv::Vec3f> epilines1, epilines2;
-    cv::computeCorrespondEpilines(points1, 1, fundamentalMatrix, epilines1);
-    cv::computeCorrespondEpilines(points2, 2, fundamentalMatrix, epilines2);
+    std::vector<cv::Vec3f> epilinesSourceR, epilinesSourceL;
+    cv::computeCorrespondEpilines(points1, 2, fundamentalMatrix, epilinesSourceR);
+    cv::computeCorrespondEpilines(points2, 1, fundamentalMatrix, epilinesSourceL);
 
-    std::vector<cv::Scalar> colors;
     for (size_t i = 0; i < points1.size(); i++) {
         cv::Scalar color = cv::Scalar(rand() % 256, rand() % 256, rand() % 256);
-        colors.push_back(color);
-    }
 
-    auto sourceSize = points1.size();
-
-    // Draw epilines on the second image (sourceR)
-    for (size_t i = 0; i < sourceSize; i++) {
-        cv::Scalar color = colors[i];
-        // sourceR
-        cv::line(sourceR, cv::Point(0, -epilines1[i][2] / epilines1[i][1]),
-                 cv::Point(sourceR.cols, -(epilines1[i][2] + epilines1[i][0] * sourceR.cols) / epilines1[i][1]), color);
-        cv::circle(sourceR, points2[i], 5, color, -1);
-        // sourceL
-        cv::line(sourceL, cv::Point(0, -epilines2[i][2] / epilines2[i][1]),
-                 cv::Point(sourceL.cols, -(epilines2[i][2] + epilines2[i][0] * sourceL.cols) / epilines2[i][1]), color);
+        cv::line(sourceL, cv::Point(sourceR.cols, -epilinesSourceR[i][2] / epilinesSourceR[i][1]),
+                 cv::Point(points1[i].x, points1[i].y), color, 1);
         cv::circle(sourceL, points1[i], 5, color, -1);
+
+        cv::line(sourceR, cv::Point(0, -epilinesSourceL[i][2] / epilinesSourceL[i][1]),
+                 cv::Point(points2[i].x, points2[i].y), color, 1);
+        cv::circle(sourceR, points2[i], 5, color, -1);
     }
 
     cv::imshow("L", sourceL);

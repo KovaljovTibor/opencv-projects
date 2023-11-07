@@ -21,7 +21,7 @@ void harrisCornerDetector() {
     cv::imshow("Harris Cube sample", sample1);
     cv::imshow("Harris House sample", sample2);
 
-    /* converting images(sources) into grayscale - easier to work with */
+    /* converting calibrationImages(sources) into grayscale - easier to work with */
     cv::cvtColor(sample1, sampleGray1, cv::COLOR_BGR2GRAY);
     cv::cvtColor(sample2, sampleGray2, cv::COLOR_BGR2GRAY);
 
@@ -29,7 +29,7 @@ void harrisCornerDetector() {
     output1 = cv::Mat::zeros(sampleGray1.size(), CV_32FC1);
     output2 = cv::Mat::zeros(sampleGray2.size(), CV_32FC1);
 
-    /* applying corner detector onto our input images(sources) */
+    /* applying corner detector onto our input calibrationImages(sources) */
     cv::cornerHarris(sampleGray1, output1, 3, 3, 0.04);
     cv::cornerHarris(sampleGray2, output2, 3, 3, 0.04);
 
