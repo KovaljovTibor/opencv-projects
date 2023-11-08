@@ -7,6 +7,15 @@
 #include <opencv2/imgproc.hpp>
 
 
+struct IntrinsicsParams {
+    double fovX{};
+    double fovY{};
+    double focalLength{};
+    cv::Point2d principalPoint;
+    double aspectRatio{};
+};
+
+
 int main() {
     /* CAMERA CALIBRATION */
 
@@ -57,17 +66,15 @@ int main() {
     std::vector<cv::Mat> rotationVectors;
     std::vector<cv::Mat> translationalVectors;
 
-    std::vector<double> stdIntrinsics;
-    std::vector<double> stdExtrinsics;
     std::vector<double> perViewError;
 
     int cameraCalibrationFlags = cv::CALIB_FIX_ASPECT_RATIO + cv::CALIB_FIX_K3 + cv::CALIB_ZERO_TANGENT_DIST
                                  + cv::CALIB_FIX_PRINCIPAL_POINT;
 
-    cv::Size frameSize(1440, 1080);
+    cv::Size imageSize(1440, 1080);
 
     std::cout << "Calibrating..." << '\n';
-    double error = cv::calibrateCamera(chessboardCorners3D, foundChessboardCorners, frameSize, cameraMatrix,
+    double error = cv::calibrateCamera(chessboardCorners3D, foundChessboardCorners, imageSize, cameraMatrix,
                                        distortionCoefficients, rotationVectors, translationalVectors,
                                        cameraCalibrationFlags);
 
@@ -78,7 +85,7 @@ int main() {
     cv::Mat mapX;
     cv::Mat mapY;
 
-    cv::initUndistortRectifyMap(cameraMatrix, distortionCoefficients, cv::Matx33f::eye(), cameraMatrix, frameSize,
+    cv::initUndistortRectifyMap(cameraMatrix, distortionCoefficients, cv::Matx33f::eye(), cameraMatrix, imageSize,
                                 CV_32FC1, mapX, mapY);
 
     for (const auto& filename: filenames) {
@@ -175,8 +182,28 @@ int main() {
 
     /* 3D RECONSTRUCTION */
 
+    // getting the intrinsics parameters
+    IntrinsicsParams intrinsicsParams;
+    cv::calibrationMatrixValues(cameraMatrix, imageSize, 0, 0, intrinsicsParams.fovX, intrinsicsParams.fovY,
+                                intrinsicsParams.focalLength, intrinsicsParams.principalPoint,
+                                intrinsicsParams.aspectRatio);
+
+    // getting the extrinsics parameters
+    cv::Mat rotationMatrix;
+    cv::Mat translationVector;
+    cv::Rodrigues(rotationVectors[i], rotationMatrix);
+    translationVector = translationalVectors[i];
+
     cv::Mat projectionMat1;
     cv::Mat projectionMat2;
+
+    double principalPointX;
+    double principalPointY;
+
+    intrinsicsParams.focalLength = cameraMatrix(0, 0);
+    intrinsicsParams.aspectRatio = cameraMatrix(1, 1) / cameraMatrix(0, 0);
+    intrinsicsParams.principalPoint.x = cameraMatrix(0, 2);
+    intrinsicsParams.principalPoint.y = cameraMatrix(1, 2);
 
     std::vector<cv::Point3f> reconstructedPoints;
 
