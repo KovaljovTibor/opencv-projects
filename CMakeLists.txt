@@ -61,6 +61,9 @@ add_chapter(template-matching-all TemplateMatching/findAllMatches.cpp)
 # Basic Morphology
 add_chapter(basic-morphology BasicMorphology/main.cpp)
 
+# Camera Calibration
+add_chapter(camera-calibration CameraCalibration/main.cpp)
+
 # Basic Stereo Vision
 add_chapter(stereo-vision BasicStereoVision/main.cpp)
 
