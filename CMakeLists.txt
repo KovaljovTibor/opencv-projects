@@ -61,6 +61,9 @@ add_chapter(template-matching-all TemplateMatching/findAllMatches.cpp)
 # Basic Morphology
 add_chapter(basic-morphology BasicMorphology/main.cpp)
 
+# Depth Map Stereo Images
+add_chapter(depth-map DepthMapStereoImages/main.cpp)
+
 # Camera Calibration
 add_chapter(camera-calibration CameraCalibration/main.cpp)
 
